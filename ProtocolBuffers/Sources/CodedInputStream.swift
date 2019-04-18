@@ -480,9 +480,19 @@ public class CodedInputStream {
     public func readData() throws -> Data {
         let size = Int(try readRawVarint32())
         if size < bufferSize - bufferPos && size > 0 {
-//            let pointer = UnsafeMutablePointerInt8From(data: buffer)
-            let unsafeRaw = UnsafeRawPointer(&buffer+bufferPos)
-            let data = Data(bytes: unsafeRaw, count: size)
+            var subBuffer:[UInt8] = buffer
+            if(subBuffer.count >= bufferPos) {
+                subBuffer.removeFirst(bufferPos)
+            }
+            if(subBuffer.count >= size) {
+                subBuffer.removeLast(subBuffer.count-size)
+            }
+            var data = Data.init(bytes: subBuffer)
+            if(data.count < size) {
+                data.append(Data.init(count: size - data.count))
+            }
+            //let unsafeRaw = UnsafeRawPointer(&buffer+bufferPos)
+            //let data = Data(bytes: unsafeRaw, count: size)
             bufferPos += size
             return data
         } else {

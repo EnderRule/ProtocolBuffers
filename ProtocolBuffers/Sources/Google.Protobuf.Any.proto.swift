@@ -161,10 +161,10 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasTypeUrl {
-                output += "\(indent) typeUrl: \(typeUrl) \n"
+                output += "\(indent) typeUrl: \(typeUrl!) \n"
             }
             if hasValue {
-                output += "\(indent) value: \(value) \n"
+                output += "\(indent) value: \(value!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output

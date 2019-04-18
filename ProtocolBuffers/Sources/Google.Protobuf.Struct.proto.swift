@@ -175,7 +175,7 @@ public extension Google.Protobuf {
             override public func getDescription(indent:String) throws -> String {
                 var output = ""
                 if hasKey {
-                    output += "\(indent) key: \(key) \n"
+                    output += "\(indent) key: \(key!) \n"
                 }
                 if hasValue {
                     output += "\(indent) value {\n"
@@ -956,13 +956,13 @@ public extension Google.Protobuf {
                 output += "\(indent) nullValue: \(nullValue.description)\n"
             }
             if hasNumberValue {
-                output += "\(indent) numberValue: \(numberValue) \n"
+                output += "\(indent) numberValue: \(numberValue!) \n"
             }
             if hasStringValue {
-                output += "\(indent) stringValue: \(stringValue) \n"
+                output += "\(indent) stringValue: \(stringValue!) \n"
             }
             if hasBoolValue {
-                output += "\(indent) boolValue: \(boolValue) \n"
+                output += "\(indent) boolValue: \(boolValue!) \n"
             }
             if hasStructValue {
                 output += "\(indent) structValue {\n"

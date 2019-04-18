@@ -154,10 +154,10 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasSeconds {
-                output += "\(indent) seconds: \(seconds) \n"
+                output += "\(indent) seconds: \(seconds!) \n"
             }
             if hasNanos {
-                output += "\(indent) nanos: \(nanos) \n"
+                output += "\(indent) nanos: \(nanos!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output

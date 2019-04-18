@@ -568,10 +568,10 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             if hasPackage {
-                output += "\(indent) package: \(package) \n"
+                output += "\(indent) package: \(package!) \n"
             }
             var dependencyElementIndex:Int = 0
             for oneValueDependency in dependency  {
@@ -631,7 +631,7 @@ public extension Google.Protobuf {
                 weakDependencyElementIndex += 1
             }
             if hasSyntax {
-                output += "\(indent) syntax: \(syntax) \n"
+                output += "\(indent) syntax: \(syntax!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output
@@ -1376,10 +1376,10 @@ public extension Google.Protobuf {
             override public func getDescription(indent:String) throws -> String {
                 var output = ""
                 if hasStart {
-                    output += "\(indent) start: \(start) \n"
+                    output += "\(indent) start: \(start!) \n"
                 }
                 if hasEnd {
-                    output += "\(indent) end: \(end) \n"
+                    output += "\(indent) end: \(end!) \n"
                 }
                 output += unknownFields.getDescription(indent: indent)
                 return output
@@ -1660,10 +1660,10 @@ public extension Google.Protobuf {
             override public func getDescription(indent:String) throws -> String {
                 var output = ""
                 if hasStart {
-                    output += "\(indent) start: \(start) \n"
+                    output += "\(indent) start: \(start!) \n"
                 }
                 if hasEnd {
-                    output += "\(indent) end: \(end) \n"
+                    output += "\(indent) end: \(end!) \n"
                 }
                 output += unknownFields.getDescription(indent: indent)
                 return output
@@ -2105,7 +2105,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             var fieldElementIndex:Int = 0
             for oneElementField in field {
@@ -3064,13 +3064,13 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             if hasExtendee {
-                output += "\(indent) extendee: \(extendee) \n"
+                output += "\(indent) extendee: \(extendee!) \n"
             }
             if hasNumber {
-                output += "\(indent) number: \(number) \n"
+                output += "\(indent) number: \(number!) \n"
             }
             if (hasLabel) {
                 output += "\(indent) label: \(label.description)\n"
@@ -3079,10 +3079,10 @@ public extension Google.Protobuf {
                 output += "\(indent) type: \(type.description)\n"
             }
             if hasTypeName {
-                output += "\(indent) typeName: \(typeName) \n"
+                output += "\(indent) typeName: \(typeName!) \n"
             }
             if hasDefaultValue {
-                output += "\(indent) defaultValue: \(defaultValue) \n"
+                output += "\(indent) defaultValue: \(defaultValue!) \n"
             }
             if hasOptions {
                 output += "\(indent) options {\n"
@@ -3092,10 +3092,10 @@ public extension Google.Protobuf {
                 output += "\(indent) }\n"
             }
             if hasOneofIndex {
-                output += "\(indent) oneofIndex: \(oneofIndex) \n"
+                output += "\(indent) oneofIndex: \(oneofIndex!) \n"
             }
             if hasJsonName {
-                output += "\(indent) jsonName: \(jsonName) \n"
+                output += "\(indent) jsonName: \(jsonName!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output
@@ -3735,7 +3735,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             if hasOptions {
                 output += "\(indent) options {\n"
@@ -4078,7 +4078,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             var valueElementIndex:Int = 0
             for oneElementValue in value {
@@ -4453,10 +4453,10 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             if hasNumber {
-                output += "\(indent) number: \(number) \n"
+                output += "\(indent) number: \(number!) \n"
             }
             if hasOptions {
                 output += "\(indent) options {\n"
@@ -4838,7 +4838,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             var methodElementIndex:Int = 0
             for oneElementMethod in method {
@@ -5256,13 +5256,13 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasName {
-                output += "\(indent) name: \(name) \n"
+                output += "\(indent) name: \(name!) \n"
             }
             if hasInputType {
-                output += "\(indent) inputType: \(inputType) \n"
+                output += "\(indent) inputType: \(inputType!) \n"
             }
             if hasOutputType {
-                output += "\(indent) outputType: \(outputType) \n"
+                output += "\(indent) outputType: \(outputType!) \n"
             }
             if hasOptions {
                 output += "\(indent) options {\n"
@@ -5272,10 +5272,10 @@ public extension Google.Protobuf {
                 output += "\(indent) }\n"
             }
             if hasClientStreaming {
-                output += "\(indent) clientStreaming: \(clientStreaming) \n"
+                output += "\(indent) clientStreaming: \(clientStreaming!) \n"
             }
             if hasServerStreaming {
-                output += "\(indent) serverStreaming: \(serverStreaming) \n"
+                output += "\(indent) serverStreaming: \(serverStreaming!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output
@@ -6042,52 +6042,52 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasJavaPackage {
-                output += "\(indent) javaPackage: \(javaPackage) \n"
+                output += "\(indent) javaPackage: \(javaPackage!) \n"
             }
             if hasJavaOuterClassname {
-                output += "\(indent) javaOuterClassname: \(javaOuterClassname) \n"
+                output += "\(indent) javaOuterClassname: \(javaOuterClassname!) \n"
             }
             if (hasOptimizeFor) {
                 output += "\(indent) optimizeFor: \(optimizeFor.description)\n"
             }
             if hasJavaMultipleFiles {
-                output += "\(indent) javaMultipleFiles: \(javaMultipleFiles) \n"
+                output += "\(indent) javaMultipleFiles: \(javaMultipleFiles!) \n"
             }
             if hasGoPackage {
-                output += "\(indent) goPackage: \(goPackage) \n"
+                output += "\(indent) goPackage: \(goPackage!) \n"
             }
             if hasCcGenericServices {
-                output += "\(indent) ccGenericServices: \(ccGenericServices) \n"
+                output += "\(indent) ccGenericServices: \(ccGenericServices!) \n"
             }
             if hasJavaGenericServices {
-                output += "\(indent) javaGenericServices: \(javaGenericServices) \n"
+                output += "\(indent) javaGenericServices: \(javaGenericServices!) \n"
             }
             if hasPyGenericServices {
-                output += "\(indent) pyGenericServices: \(pyGenericServices) \n"
+                output += "\(indent) pyGenericServices: \(pyGenericServices!) \n"
             }
             if hasJavaGenerateEqualsAndHash {
-                output += "\(indent) javaGenerateEqualsAndHash: \(javaGenerateEqualsAndHash) \n"
+                output += "\(indent) javaGenerateEqualsAndHash: \(javaGenerateEqualsAndHash!) \n"
             }
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             if hasJavaStringCheckUtf8 {
-                output += "\(indent) javaStringCheckUtf8: \(javaStringCheckUtf8) \n"
+                output += "\(indent) javaStringCheckUtf8: \(javaStringCheckUtf8!) \n"
             }
             if hasCcEnableArenas {
-                output += "\(indent) ccEnableArenas: \(ccEnableArenas) \n"
+                output += "\(indent) ccEnableArenas: \(ccEnableArenas!) \n"
             }
             if hasObjcClassPrefix {
-                output += "\(indent) objcClassPrefix: \(objcClassPrefix) \n"
+                output += "\(indent) objcClassPrefix: \(objcClassPrefix!) \n"
             }
             if hasCsharpNamespace {
-                output += "\(indent) csharpNamespace: \(csharpNamespace) \n"
+                output += "\(indent) csharpNamespace: \(csharpNamespace!) \n"
             }
             if hasSwiftPrefix {
-                output += "\(indent) swiftPrefix: \(swiftPrefix) \n"
+                output += "\(indent) swiftPrefix: \(swiftPrefix!) \n"
             }
             if hasPhpClassPrefix {
-                output += "\(indent) phpClassPrefix: \(phpClassPrefix) \n"
+                output += "\(indent) phpClassPrefix: \(phpClassPrefix!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -7074,16 +7074,16 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasMessageSetWireFormat {
-                output += "\(indent) messageSetWireFormat: \(messageSetWireFormat) \n"
+                output += "\(indent) messageSetWireFormat: \(messageSetWireFormat!) \n"
             }
             if hasNoStandardDescriptorAccessor {
-                output += "\(indent) noStandardDescriptorAccessor: \(noStandardDescriptorAccessor) \n"
+                output += "\(indent) noStandardDescriptorAccessor: \(noStandardDescriptorAccessor!) \n"
             }
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             if hasMapEntry {
-                output += "\(indent) mapEntry: \(mapEntry) \n"
+                output += "\(indent) mapEntry: \(mapEntry!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -7721,19 +7721,19 @@ public extension Google.Protobuf {
                 output += "\(indent) ctype: \(ctype.description)\n"
             }
             if hasPacked {
-                output += "\(indent) packed: \(packed) \n"
+                output += "\(indent) packed: \(packed!) \n"
             }
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             if hasLazy {
-                output += "\(indent) lazy: \(`lazy`) \n"
+                output += "\(indent) lazy: \(`lazy`!) \n"
             }
             if (hasJstype) {
                 output += "\(indent) jstype: \(jstype.description)\n"
             }
             if hasWeak {
-                output += "\(indent) weak: \(`weak`) \n"
+                output += "\(indent) weak: \(`weak`!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -8535,10 +8535,10 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasAllowAlias {
-                output += "\(indent) allowAlias: \(allowAlias) \n"
+                output += "\(indent) allowAlias: \(allowAlias!) \n"
             }
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -8882,7 +8882,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -9187,7 +9187,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             var uninterpretedOptionElementIndex:Int = 0
             for oneElementUninterpretedOption in uninterpretedOption {
@@ -9553,7 +9553,7 @@ public extension Google.Protobuf {
         override public func getDescription(indent:String) throws -> String {
             var output = ""
             if hasDeprecated {
-                output += "\(indent) deprecated: \(deprecated) \n"
+                output += "\(indent) deprecated: \(deprecated!) \n"
             }
             if (hasIdempotencyLevel) {
                 output += "\(indent) idempotencyLevel: \(idempotencyLevel.description)\n"
@@ -9920,10 +9920,10 @@ public extension Google.Protobuf {
             override public func getDescription(indent:String) throws -> String {
                 var output = ""
                 if hasNamePart {
-                    output += "\(indent) namePart: \(namePart) \n"
+                    output += "\(indent) namePart: \(namePart!) \n"
                 }
                 if hasIsExtension {
-                    output += "\(indent) isExtension: \(isExtension) \n"
+                    output += "\(indent) isExtension: \(isExtension!) \n"
                 }
                 output += unknownFields.getDescription(indent: indent)
                 return output
@@ -10259,22 +10259,22 @@ public extension Google.Protobuf {
                 nameElementIndex += 1
             }
             if hasIdentifierValue {
-                output += "\(indent) identifierValue: \(identifierValue) \n"
+                output += "\(indent) identifierValue: \(identifierValue!) \n"
             }
             if hasPositiveIntValue {
-                output += "\(indent) positiveIntValue: \(positiveIntValue) \n"
+                output += "\(indent) positiveIntValue: \(positiveIntValue!) \n"
             }
             if hasNegativeIntValue {
-                output += "\(indent) negativeIntValue: \(negativeIntValue) \n"
+                output += "\(indent) negativeIntValue: \(negativeIntValue!) \n"
             }
             if hasDoubleValue {
-                output += "\(indent) doubleValue: \(doubleValue) \n"
+                output += "\(indent) doubleValue: \(doubleValue!) \n"
             }
             if hasStringValue {
-                output += "\(indent) stringValue: \(stringValue) \n"
+                output += "\(indent) stringValue: \(stringValue!) \n"
             }
             if hasAggregateValue {
-                output += "\(indent) aggregateValue: \(aggregateValue) \n"
+                output += "\(indent) aggregateValue: \(aggregateValue!) \n"
             }
             output += unknownFields.getDescription(indent: indent)
             return output
@@ -10899,10 +10899,10 @@ public extension Google.Protobuf {
                     spanElementIndex += 1
                 }
                 if hasLeadingComments {
-                    output += "\(indent) leadingComments: \(leadingComments) \n"
+                    output += "\(indent) leadingComments: \(leadingComments!) \n"
                 }
                 if hasTrailingComments {
-                    output += "\(indent) trailingComments: \(trailingComments) \n"
+                    output += "\(indent) trailingComments: \(trailingComments!) \n"
                 }
                 var leadingDetachedCommentsElementIndex:Int = 0
                 for oneValueLeadingDetachedComments in leadingDetachedComments  {
@@ -11674,13 +11674,13 @@ public extension Google.Protobuf {
                     pathElementIndex += 1
                 }
                 if hasSourceFile {
-                    output += "\(indent) sourceFile: \(sourceFile) \n"
+                    output += "\(indent) sourceFile: \(sourceFile!) \n"
                 }
                 if hasBegin {
-                    output += "\(indent) begin: \(begin) \n"
+                    output += "\(indent) begin: \(begin!) \n"
                 }
                 if hasEnd {
-                    output += "\(indent) end: \(end) \n"
+                    output += "\(indent) end: \(end!) \n"
                 }
                 output += unknownFields.getDescription(indent: indent)
                 return output
